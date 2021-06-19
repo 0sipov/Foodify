@@ -1,0 +1,14 @@
+.inputBlock {
+  margin: 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.label {
+}
+.input {
+  height: 25px;
+}
+.error {
+  position: absolute;
+}

@@ -1,0 +1,10 @@
+.form {
+  position: relative;
+  padding: 15px 10px;
+  width: 25%;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: #fff;
+}

@@ -1,0 +1,27 @@
+.dishCard {
+  margin: 20px auto 10px;
+}
+
+.buttonWrapper {
+  margin: auto;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 786px) {
+  .buttonWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.button {
+  min-width: 190px;
+}
+.button:not(:last-child) {
+  margin: 0 0 10px;
+}
+@media screen and (min-width: 786px) {
+  .button:not(:last-child) {
+    margin: auto;
+  }
+}

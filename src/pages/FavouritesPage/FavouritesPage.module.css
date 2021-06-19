@@ -1,0 +1,22 @@
+.dishList {
+  margin: auto;
+  padding: 0 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.dishCard {
+  margin: 20px 5px 0;
+}
+.createDishButton {
+  display: block;
+  margin: 20px auto 0;
+}
+@media screen and (min-width: 786px) {
+  .createDishButton {
+    margin: 0;
+    position: absolute;
+    top: 6px;
+    right: 50px;
+  }
+}
