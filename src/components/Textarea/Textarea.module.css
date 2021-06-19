@@ -1,0 +1,14 @@
+.textareaBlock {
+  margin: 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.label {
+}
+.textarea {
+  height: 150px;
+}
+.error {
+  position: absolute;
+}

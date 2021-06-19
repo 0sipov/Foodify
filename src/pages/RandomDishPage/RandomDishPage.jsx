@@ -6,6 +6,7 @@ import DishCard from "../../components/DishCard/DishCard";
 import NavBar from "../../components/NavBar/NavBar";
 import { getRandomDishAction } from "../../redux/actions/actions";
 import { dishCard, buttonWrapper, button } from "./RandomDishPage.module.css";
+import { AddDishToLocalStorage } from "../../services/AddDishToLocalStorage";
 const RandomDishPage = () => {
   const dishData = useSelector((state) => state.randomDish);
   const dispatch = useDispatch();
@@ -16,16 +17,7 @@ const RandomDishPage = () => {
   });
   const handleSkip = () => dispatch(getRandomDishAction());
   const handleLike = () => {
-    let favourites = localStorage.getItem("favourites");
-    if (favourites) {
-      favourites = JSON.parse(favourites);
-      localStorage.setItem(
-        "favourites",
-        JSON.stringify([...favourites, dishData])
-      );
-    } else {
-      localStorage.setItem("favourites", JSON.stringify([dishData]));
-    }
+    AddDishToLocalStorage(dishData);
     dispatch(getRandomDishAction());
   };
   return (

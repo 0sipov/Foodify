@@ -16,7 +16,9 @@ import {
 const FavoritesPage = () => {
   const dispatch = useDispatch();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  console.log(modalIsOpen);
+  const toggleModal = (e) => {
+    return e?.target === e?.currentTarget ? setModalIsOpen(!modalIsOpen) : null;
+  };
   const favourites = JSON.parse(localStorage.getItem("favourites"));
   useEffect(() => {
     dispatch(addRandomDishAction(favourites));
@@ -27,7 +29,7 @@ const FavoritesPage = () => {
       <Button
         text="Add custom dish"
         type="button"
-        onClick={() => setModalIsOpen(!modalIsOpen)}
+        onClick={toggleModal}
         styles={createDishButton}
       />
       <div className={dishList}>
@@ -37,12 +39,7 @@ const FavoritesPage = () => {
           );
         })}
       </div>
-      {modalIsOpen && (
-        <CreateDishModal
-          setModalIsOpen={setModalIsOpen}
-          modalIsOpen={modalIsOpen}
-        />
-      )}
+      {modalIsOpen && <CreateDishModal toggleModal={toggleModal} />}
     </>
   );
 };

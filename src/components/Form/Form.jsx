@@ -1,9 +1,9 @@
 import React from "react";
 import { form } from "./Form.module.css";
 
-const Form = ({ children }) => {
+const Form = ({ children, styles }) => {
   return (
-    <form action="submit" className={form}>
+    <form action="submit" className={`${form} ${styles}`}>
       {children}
     </form>
   );

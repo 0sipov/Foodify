@@ -5,3 +5,32 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.form {
+  margin: 60px auto 0;
+  max-width: 433px;
+  min-height: 407px;
+}
+.input {
+  margin: 0 auto 17px;
+  padding: 9px 18px;
+  width: 343px;
+  height: 36px;
+}
+.textarea {
+  margin: 0 auto 17px;
+  padding: 9px 18px;
+  width: 343px;
+  height: 159px;
+}
+.formTitle {
+  margin: 0 0 50px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.createDishButton {
+  margin: 0 auto;
+  padding: 8px 20px;
+  width: 343px;
+  font-size: 18px;
+  font-weight: 700;
+}
