@@ -31,7 +31,7 @@ const FavoritesPage = () => {
         styles={createDishButton}
       />
       <div className={dishList}>
-        {favourites.map((dish) => {
+        {favourites?.map((dish) => {
           return (
             <DishCard key={dish.dishId} dishData={dish} styles={dishCard} />
           );
