@@ -25,7 +25,6 @@ const CreateDishModal = ({ toggleModal }) => {
     dishRecipe,
   });
   const handleCreateDishButton = () => {
-    console.log(createNewDish());
     AddDishToLocalStorage(createNewDish());
     toggleModal();
   };
